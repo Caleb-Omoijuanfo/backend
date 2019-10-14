@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-const util = require('../../api/services/util.js');
+const util = require('./util.js');
 
 // Connection URL
 const url = 'mongodb://localhost:27017';

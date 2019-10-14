@@ -3,7 +3,7 @@
 var express = require('express');
 var app = express();
 var cors = require('cors');
-const path = require('path');
+
 
 // Allow CORS
 app.use(cors());
@@ -15,10 +15,6 @@ app.use(function(request, response, next) {
 });
 
 app.use('/', express.static('public'));
-
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
 
 var postController = require('./controllers/postController');
 app.use('/post', postController);
